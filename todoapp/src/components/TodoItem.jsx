@@ -15,21 +15,20 @@ export default function TodoItem({ item, todo, todos, setTodos }) {
   const handleComplete = (name) => {
     console.log("Completed item:", todo);
     // Logic to mark the todo item as completed
-    const newArray = todos.map((todo) => 
-    todo.name === name ? {...todo, completed: !todo.completed} : todo
+    const newArray = todos.map((todo) =>
+      todo.name === name ? { ...todo, completed: !todo.completed } : todo
     );
     setTodos(newArray);
     console.log("Updated todos:", newArray);
-  }
-    
-  const newStyle = todo.completed ? styles.completed : ""
+  };
+
+  const newStyle = todo.completed ? styles.completed : "";
 
   return (
     <div className={styles.item}>
       <div className={styles.itemName}>
-        
-        <span onClick={() =>handleComplete(todo.name)} className={newStyle} >
-        {todo.name}
+        <span onClick={() => handleComplete(todo.name)} className={newStyle}>
+          {todo.name}
         </span>
         <span>
           <button
@@ -39,10 +38,8 @@ export default function TodoItem({ item, todo, todos, setTodos }) {
             X
           </button>
         </span>
-       
       </div>
       <hr className={styles.line} />
     </div>
   );
 }
-    

@@ -24,6 +24,11 @@
     border-radius: 4px;
     cursor: pointer;
 }
+.deleteButton:hover {
+    background-color: #282c34;
+    opacity: 0.9;
+    transition: background-color 0.5s ease-in-out;
+}
 
 .completed {
     text-decoration: line-through;

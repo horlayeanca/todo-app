@@ -36,3 +36,8 @@
     cursor: pointer;
     font-size: medium;
 }
+.modernButton:hover {
+    background-color: #3a3f47;
+    opacity: 0.9;
+    transition: background-color 0.5s ease-in-out;
+}
